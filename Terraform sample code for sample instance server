@@ -1,0 +1,13 @@
+# Code To create a Ec2 server
+provider "aws" {
+  region = "us-east-1"  # Set your  AWS region
+}
+
+resource "aws_instance" "example_instance" {
+  ami           = "ami-id"  # Replace with your AMI ID
+  instance_type = "t2.micro"                # Set instance type
+
+  tags = {
+    Name = "sampleInstance"
+  }
+}
